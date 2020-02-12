@@ -1,0 +1,18 @@
+version: "3"
+networks:
+    dbwebb:
+services:
+    server:
+        image: blixter/vlinux-mazeserver:latest
+        container_name: "mazeserver"
+        ports:
+            - "1337:1337"
+        networks:
+            dbwebb:
+    client:
+        image: blixter/vlinux-mazeclient:loop
+        container_name: "mazeclient"
+        networks:
+            dbwebb:
+        links:
+            - server:server

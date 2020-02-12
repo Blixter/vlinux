@@ -1,0 +1,2 @@
+2: rsync -av -e "ssh -p 2222" redovisa/ robin@localhost:vhosts/me.linux.se/htdocs/
+3. lynx me.linux.se

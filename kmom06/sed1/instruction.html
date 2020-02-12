@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Lab 3 - vlinux</title>
+<style>
+html {
+    overflow-y: scroll;
+}
+
+body {
+    margin: 8px auto;
+    max-width: 700px;
+}
+
+h2 {
+    line-height: 2.5em;
+    border-bottom: 1px solid #aaa;
+}
+
+h3 {
+    line-height: 2.5em;
+    border-bottom: 1px solid #ccc;
+}
+
+p {
+    margin-bottom: 22px;
+}
+
+div.answer {
+  font-family: "Courier New", monospace;
+  white-space: pre;
+  margin-bottom: 1em;
+}
+
+.fail {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+.nopass {
+    color: olive;
+}
+
+.pass {
+    color: green;
+}
+
+.passdistinct {
+    color: DarkGoldenRod;
+}
+table, th, td {
+    border: 1px solid #666;
+}
+
+code {
+    background-color: #eee;
+    border: 1px solid #999;
+    padding: 1px;
+    font-size: larger;
+}
+
+pre code {
+    display: block;
+    background-color: #eee;
+    border: none;
+    border-left: 2px solid #999;
+    padding: 0.5em;
+    margin-bottom: 22px;
+}
+</style>
+</head>
+<body>
+
+<pre>
+e3d0f690a5d6d8e572fdd2838525f6c2
+vlinux
+sed1
+v1
+rony18
+2019-10-09 07:27:17
+v4.0.0 (2019-03-05)
+</pre>
+
+<p><i>Generated 2019-10-09 09:27:17 by <a href="https://github.com/dbwebb-se/lab">dbwebb lab-utility</a> v4.0.0 (2019-03-05).</i></p>
+<hr>
+
+<h1>Lab 3 - vlinux</h1>
+<p>A lab where you use Unix tools available from the command line interface to manipulate a textfile. Have a look at https://regex101.com/. It is a good tool when trying out regular expressions.</p>
+
+
+<h2>1. Sed</h2>
+<p>Work with the command <code>sed</code> to parse/match text from files. This lab is constructed for GNU/sed. Use <code>man sed</code> as reference.</p>
+
+<p>To answer the questions, use the following structure:
+<code>ANSWER = $(sed &lt;flag&gt; '/regex/p' &lt; textfile.txt)</code></p>
+
+<p>The relevant flags are <code>-E</code> (Extended) and <code>-n</code> (just print the matching lines)</p>
+
+
+<h3>Exercise 1.1 (1 points)</h3>
+<p>Use the <code>sed</code> command and match <code>192.168.0.1</code> from the file <code>numbers.txt</code>. The content of the file is:</p>
+
+<blockquote>
+  <p>192.168.0.1<br />
+  192-168-0-1<br />
+  19216801<br />
+  19.21.68.01<br />
+  192.168.0-1<br /></p>
+</blockquote>
+
+<p>Answer with the result.</p>
+
+
+
+
+
+
+<h3>Exercise 1.2 (1 points)</h3>
+<p>Use the <code>sed</code> command and match all lines starting with the word <code>The</code> in the file <code>quotes.txt</code>. The content of the file is:</p>
+
+<blockquote>
+  <p>People say nothing is impossible, but I do nothing every day.<br />
+  The best thing about the future is that it comes one day at a time.<br />
+  The only mystery in life is why the kamikaze pilots wore helmets.<br />
+  I don’t believe in astrology; I’m a Sagittarius and we’re skeptical.<br />
+  My opinions may have changed, but not the fact that I’m right.<br />
+  A bank is a place that will lend you money if you can prove that you don’t need it.<br /></p>
+</blockquote>
+
+<p>Answer with the result.</p>
+
+
+
+
+
+
+<h3>Exercise 1.3 (1 points)</h3>
+<p>Use the <code>sed</code> command and match all lines containing a lowercased, two lettered word followed by a space and a word starting with a lowercase <code>a</code> in the file <code>quotes.txt</code>. The content of the file is:</p>
+
+<blockquote>
+  <p>People say nothing is impossible, but I do nothing every day.<br />
+  The best thing about the future is that it comes one day at a time.<br />
+  The only mystery in life is why the kamikaze pilots wore helmets.<br />
+  I don’t believe in astrology; I’m a Sagittarius and we’re skeptical.<br />
+  My opinions may have changed, but not the fact that I’m right.<br />
+  A bank is a place that will lend you money if you can prove that you don’t need it.<br /></p>
+</blockquote>
+
+<p>Answer with the result.</p>
+
+
+
+
+
+
+<h3>Exercise 1.4 (1 points)</h3>
+<p>Use the <code>sed</code> command and match all lines having an <code>e</code> in the last word in the file <code>quotes.txt</code>. The content of the file is:</p>
+
+<blockquote>
+  <p>People say nothing is impossible, but I do nothing every day.<br />
+  The best thing about the future is that it comes one day at a time.<br />
+  The only mystery in life is why the kamikaze pilots wore helmets.<br />
+  I don’t believe in astrology; I’m a Sagittarius and we’re skeptical.<br />
+  My opinions may have changed, but not the fact that I’m right.<br />
+  A bank is a place that will lend you money if you can prove that you don’t need it.<br /></p>
+</blockquote>
+
+<p>Answer with the result.</p>
+
+
+
+
+
+
+<h3>Exercise 1.5 (1 points)</h3>
+<p>Use the <code>sed</code> command and match all valid emails in the file <code>emails.txt</code>. Use https://en.wikipedia.org/wiki/Email_address#Syntax to see which are valid. The content of the file is:</p>
+
+<blockquote>
+  <p>fake@somewhere.c0m<br />
+  another_fake23@city.se<br />
+  programmer@dbwebb.se<br />
+  fiSHy_AT_computer.net<br />
+  mobile@phone.s<br />
+  username@website.com<br />
+  1a2b3c@456.com<br />
+  someone@temp@stuff<br />
+  &#8221; &#8220;@example.org<br />
+  here.is.an.email@address.org<br />
+  a@b.c<br /></p>
+</blockquote>
+
+<p>Answer with the result.</p>
+
+
+
+
+
+
+
+<h2>2. Capturing groups and substitution</h2>
+<p>Practise on working with grouping and substitution. The structure of a command may look like:
+<code>$(sed -E 's/&lt;match&gt;/&lt;substitution&gt;/g')</code>.</p>
+
+
+<h3>Exercise 2.1 (1 points)</h3>
+<p>You will use the file <code>substitution.txt</code>. Thor is feeling stronger so help him to change the username to <code>MightyThor</code> in the file.</p>
+
+<p>Answer with the result.</p>
+
+
+
+
+
+
+<h3>Exercise 2.2 (1 points)</h3>
+<p>You will use the file <code>substitution.txt</code>. Thor is not mighty anymore, but he want to change <code>home</code> to <code>Asgaard</code>. Help him do that.</p>
+
+<p>Answer with the result.</p>
+
+
+
+
+
+
+<h3>Exercise 2.3 (1 points)</h3>
+<p>You will use the file <code>substitution.txt</code>. Help Thor to combine the two former questions.</p>
+
+<p>Answer with the result.</p>
+
+
+
+
+
+
+<h3>Exercise 2.4 (1 points)</h3>
+<p>You will use the file <code>substitution.txt</code>. Thor got a picture that he wants to put in the family folder. Create a new entry under <code>/home/Thor/Pictures/Family/</code> where Thor gets his own folder containing a picture, called <code>selfie.png</code>.</p>
+
+<p>Answer with the result.</p>
+
+
+
+
+
+
+<h3>Exercise 2.5 (1 points)</h3>
+<p>You will use the logfile <code>access-medium.log</code>. Use sed to get the year, month and day from each line in the log. Present the result in the format: <code>YYYY-Mmm-dd</code>, for example 2019-May-18.</p>
+
+<p>Answer with the result.</p>
+
+
+
+
+
+
+<h3>Exercise 2.6 (1 points)</h3>
+<p>You will use the logfile <code>access-medium.log</code>. Use sed to get only the ip-addresses from each line where the first digit is between 4 and 6 (4 and 6 included).</p>
+
+<p>Answer with the result.</p>
+
+
+
+
+
+
+
+<h2>3. Extra assignments</h2>
+<p>Solve these optional questions to earn extra points. You might want to look at more flags and options for the sed command.</p>
+
+
+<h3>Exercise 3.1 (3 points)</h3>
+<p>You will use the logfile <code>access-medium.log</code>. Use sed to get all URL&#8217;s (the domain) from the file. Do not match URL&#8217;s with only uppercase.</p>
+
+<p>Answer with the result.</p>
+
+
+
+
+
+
+
+<hr>
+<code>e3d0f690a5d6d8e572fdd2838525f6c2</code>
+
+</body>
+</html>

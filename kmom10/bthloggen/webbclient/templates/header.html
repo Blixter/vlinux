@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Kmom10 - Webbclient</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Private stylesheet, loads last -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand" href="{{ url_for('main') }}">Vlinux</a>
+      
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a {%- if request.path=="/" %} class="nav-link active" {%- else %} class="nav-link" {% endif %} href="{{ url_for('main') }}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a {%- if request.path=="/data" %} class="nav-link active" {%- else %} class="nav-link" {% endif %} href="{{ url_for('data') }}">Data</a>
+                </li>
+                <li class="nav-item">
+                        <a {%- if request.path=="/search" %} class="nav-link active" {%- else %} class="nav-link" {% endif %} href="{{ url_for('search') }}">Search</a>
+                </li>
+          </ul>
+        </div>
+      </nav>

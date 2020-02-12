@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<form role="form" method="POST" action="{{ url_for('search') }}">
+    <div class="form-group">
+        <label for="ip">Ip</label>
+        <input
+            type="text"
+            name="ip"
+            class="form-control"
+            placeholder="e.g. 192.168.1.130"
+            autofocus
+        />
+        <label for="day">Day</label>
+        <input
+            type="text"
+            name="day"
+            class="form-control"
+            pattern="[0-9]{2}"
+            placeholder="e.g. 12"
+            autofocus
+        />
+        <label for="month">Month</label>
+        <input
+            type="text"
+            pattern="[A-Z][a-z]{2}"
+            placeholder="e.g. Aug"
+            name="month"
+            class="form-control"
+            autofocus
+        />
+        <label for="time">Time</label>
+        <input
+            type="text"
+            name="time"
+            placeholder="e.g. 14:05:20"
+            class="form-control"
+            autofocus
+        />
+        <label for="url">Url</label>
+        <input
+            type="text"
+            name="url"
+            class="form-control"
+            placeholder="e.g. google"
+            autofocus
+        />
+    </div>
+    <button type="submit" class="btn btn-success btn-lg btn-block">Search</button>
+</form>

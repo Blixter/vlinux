@@ -1,0 +1,12 @@
+/home/Thor/Documents/
+/home/Thor/Documents/Top_Secret/grandmas_pancakes.txt
+/home/Thor/Downloads/
+/home/Thor/Downloads/Music/ABBA-money_money.mp3
+/home/Thor/Pictures/Family/
+/home/Thor/Pictures/Family/Loki/brother.png
+/home/Thor/Pictures/Family/Odin/father.png
+/home/Thor/Pictures/Vacation/Barcelona/a_day_at_the_beach.png
+/home/Thor/Work/
+/home/Thor/Work/Wanted_Villains/
+/home/Thor/Work/Wanted_Villains/Fafnir/fafnir.png
+/home/Thor/Work/Wanted_Villains/Mephisto/mephi.png

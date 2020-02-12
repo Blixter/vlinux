@@ -1,0 +1,2 @@
+roomid,description,west,east,south,north,text
+3,Room 3,-,4,6,0,Direction not allowed

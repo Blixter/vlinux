@@ -1,0 +1,25 @@
+version: "3"
+networks:
+    vlinux:
+services:
+    server:
+        image: blixter/vlinux-kmom10:server
+        container_name: "kmom10server"
+        ports:
+            - "1337:1337"
+        volumes:
+            - "./data/:/server/data/"
+        networks:
+            vlinux:
+    client:
+        image: blixter/vlinux-kmom10:client
+        container_name: "kmom10client"
+        networks:
+            vlinux:
+    webclient:
+        image: blixter/vlinux-kmom10:webclient
+        container_name: "kmom10webclient"
+        ports:
+            - "1338:1338"
+        networks:
+            vlinux:

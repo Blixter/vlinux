@@ -1,0 +1,11 @@
+fake@somewhere.c0m
+another_fake23@city.se
+programmer@dbwebb.se
+fiSHy_AT_computer.net
+mobile@phone.s
+username@website.com
+1a2b3c@456.com
+someone@temp@stuff
+" "@example.org
+here.is.an.email@address.org
+a@b.c

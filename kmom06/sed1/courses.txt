@@ -1,0 +1,4 @@
+Kenneth Lewenhagen is the teacher in the course VLinux (DV1611).
+Andreas Arnesson is the teacher in the course OOPython (DV1437).
+Emil Folino is the teacher in the course Webapp (DV1609).
+Mikael Roos is the teacher in the course OOPHP (DV1608).

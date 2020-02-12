@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% include 'header.html' %}
+<div class="container-fluid">
+  <h1>Webbclient</h1>
+      <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <h3>Welcome!</h3>
+                <p>This is a webclient for searching through a log file.
+                    You can find the entire log here <a href="{{ url_for('data') }}">Data</a>.</p>
+                <p>Head over to <a href="{{ url_for('search') }}">Search</a> for searching in the log. 
+                    You can search on <code>ip</code>, <code>day</code>, <code>month</code>, <code>time</code> and <code>url</code>,
+                    in any combination you want.</p>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+</div>
+
+{% include 'footer.html' %}
+
+
+

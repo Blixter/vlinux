@@ -1,0 +1,4 @@
+1. Namn på servern: debian
+2. Ip-adress: 127.0.1.1
+3. Linux debian 4.19.0-5-amd64 #1 SMP Debian 4.19.37-5+deb10u2 (2019-08-08) x86_64 GNU/Linux
+4. Länk till asciinema: https://asciinema.org/a/X0SuH8PupaeyRd6hs6NqIxB2q

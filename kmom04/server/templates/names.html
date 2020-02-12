@@ -1,0 +1,20 @@
+<!DOCTYPE html>   
+<h1>Names</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Chili names</th>
+                </tr>
+            </thead>
+            <tbody>
+        
+        {%for name in names%}
+        
+        <!-- table rows -->
+        <tr>
+            <td>{{ name }}</td>
+        
+        </tr>
+        {%endfor%}
+        </tbody>
+        </table>
